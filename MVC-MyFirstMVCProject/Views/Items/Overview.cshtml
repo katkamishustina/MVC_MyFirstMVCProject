@@ -1,0 +1,19 @@
+﻿@model MVC_MyFirstMVCProject.Models.Item
+@{
+    // var message = "Hello, guest!";
+    var items = new List<String> { "Item1", "Item2", "Item3" };
+}
+<p>This is the name of the item @Model.Name </p>
+<ul>
+    @foreach (var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<form asp-action="Submit">
+    <div>
+        <input asp-for="Name"/>
+    </div>
+    <button type="submit">Submit</button>
+</form>
